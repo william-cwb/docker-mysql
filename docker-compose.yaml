@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.6
+    container_name: db_mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_HOST=%
+      - MYSQL_USER=root
+      - MYSQL_ROOT_PASSWORD=12345678
+    volumes:
+      - ./data:/var/lib/mysql
